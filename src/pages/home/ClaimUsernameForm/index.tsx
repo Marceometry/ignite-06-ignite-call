@@ -1,9 +1,10 @@
-import { Button, Text, TextInput } from '@ignite-ui/react'
+import { Button, Text } from '@ignite-ui/react'
 import { ArrowRight } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
-import { Form, FormAnnotation } from './styles'
-import z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import z from 'zod'
+import { Input } from '@/components'
+import { Form, FormAnnotation } from './styles'
 
 const claimUsernameFormSchema = z.object({
   username: z
@@ -33,9 +34,7 @@ export const ClaimUsernameForm = () => {
   return (
     <>
       <Form as="form" onSubmit={handleSubmit(handleClaimUsername)}>
-        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-        {/* @ts-ignore */}
-        <TextInput
+        <Input
           size="sm"
           prefix="ignite.com/"
           placeholder="seu-usuario"

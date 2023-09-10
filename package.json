@@ -12,6 +12,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.0",
     "@ignite-ui/react": "^2.2.4",
+    "@next-auth/prisma-adapter": "^0.4.4-canary.81",
     "@prisma/client": "^5.2.0",
     "@types/node": "20.5.4",
     "@types/react": "18.2.21",

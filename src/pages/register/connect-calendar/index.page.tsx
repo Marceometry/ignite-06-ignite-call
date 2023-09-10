@@ -12,6 +12,8 @@ export default function ConnectCalendar() {
   const isSignedIn = session.status === 'authenticated'
   const hasAuthError = !!router.query.error
 
+  const handleContinue = () => router.push('/register/time-intervals')
+
   return (
     <Container>
       <Header>
@@ -51,7 +53,7 @@ export default function ConnectCalendar() {
           </AuthError>
         )}
 
-        <Button type="submit" disabled={!isSignedIn}>
+        <Button type="submit" disabled={!isSignedIn} onClick={handleContinue}>
           Próximo passo
           <ArrowRight weight="bold" />
         </Button>

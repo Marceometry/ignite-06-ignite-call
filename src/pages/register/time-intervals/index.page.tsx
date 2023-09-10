@@ -15,6 +15,7 @@ import {
 } from './styles'
 import { getWeekDays } from '@/utils/get-week-days'
 import { convertTimeStringToMinutes } from '@/utils/convert-time-string-to-minutes'
+import { api } from '@/lib/axios'
 
 const timeIntervalFormSchema = z.object({
   intervals: z
@@ -81,7 +82,7 @@ export default function TimeIntervals() {
   const intervals = watch('intervals')
 
   const handleSetTimeIntervals = handleSubmit(async (data) => {
-    console.log(data)
+    await api.post('/users/time-intervals', { intervals: data.intervals })
   })
 
   return (

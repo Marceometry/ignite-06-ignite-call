@@ -90,7 +90,7 @@ export default function Register() {
           )}
         </label>
 
-        <Button type="subimt">
+        <Button type="submit">
           Próximo passo
           <ArrowRight weight="bold" />
         </Button>
